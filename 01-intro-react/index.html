@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Source: index-react.html-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <!--own React library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+ 
+    <!--Web browser-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+ 
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+ 
+    <script type="text/babel">
+ 
+      const divElement = document.querySelector("#app");
+      const nombre = 'Goku';
+      // const h1Tag1 = <h1> Hola Mundo</h1>;
+      const h1Tag1 = <h1> Hola, soy { nombre } </h1>;
+      
+ 
+      const divRoot = ReactDOM.createRoot(divElement);
+ 
+      divRoot.render(h1Tag1);
+    </script>
+  </body>
+</html>
