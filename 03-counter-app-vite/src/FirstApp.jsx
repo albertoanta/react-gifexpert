@@ -21,7 +21,7 @@ const  hazSaludo = () =><h3>Esto es una peticion de saludo</h3>;
 
 import PropTypes from "prop-types";
 
-export const FirsApp = ( {title, subTitle, name } ) => {
+export const FirstApp = ( {title, subTitle, name } ) => {
   
 
   console.log ( title);
@@ -29,26 +29,31 @@ export const FirsApp = ( {title, subTitle, name } ) => {
 
   return (
     <>
-      <h1>{title}</h1>
-      <h1> { `Primera App` } { newMessage}</h1>
+      {/* <h1> {title} </h1> */}
+      <h1 data-testid="test-title" > {title} </h1>
+      {/* <h1> { `Primera App` } { newMessage}</h1> */}
       {/* <code> { JSON.stringify( secondMessage) }</code> */}
       <p>Esto es un subtitulo</p>
       { hazSaludo() }
       <p>{ subTitle +1}</p>
+      <p>{ subTitle }</p>
+      
       <p>{name}</p>
     </>
   )
 } 
 
-FirsApp.propTypes = {
+FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.number
+  // subTitle: PropTypes.number
+  subTitle: PropTypes.string
 
 }
 
-FirsApp.defaultProps = {
+FirstApp.defaultProps = {
   name : "Alberto Anta",
   subTitle: "No hay subtitulo",
-  title: "No hay titulo",
+  // subTitle: 123,
+  // title: "No hay titulo",
 
 }

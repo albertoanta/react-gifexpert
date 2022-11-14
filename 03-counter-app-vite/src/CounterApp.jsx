@@ -13,11 +13,11 @@ export const CounterApp = ( {value} ) => {
   const[ counter, setCounter ] = useState( value );
 
 
-  const HandleAdd = (event) => { 
-    console.log(event)
-    console.log(+1);
+  const HandleAdd = ( event ) => { 
+    //console.log(event)
+    // console.log(+1);
     setCounter (counter +1 ) ;
-   //  setCounter( (c) => c+1 ) ;
+   //  setCounter( (c) => c+1 ) ; // es analogo a lo anterior
   
   }
 
@@ -25,16 +25,16 @@ export const CounterApp = ( {value} ) => {
    
   const HandleReset = (event) => { 
   
-  setCounter (value) ;
+    setCounter (value) ;
    //  setCounter( (c) => c+1 ) ;
   
   }
 
   return (
     <>
-      <h1> CounterApp </h1>
-      <h2> {value} </h2>
-      <h2> Contador hooks {counter} </h2>
+      <h1>CounterApp</h1>
+      <h2>{value}</h2>
+      <h4> Contador hooks {counter} </h4>
 
       {/* <button onClick={ (event) => HandleAdd(event) }> */}
       <button onClick={ HandleAdd }>
@@ -42,7 +42,7 @@ export const CounterApp = ( {value} ) => {
       </button>
 
       <button onClick={ HandleSubstract }> -1 </button>
-      <button onClick={ HandleReset }> Reset </button>
+      <button aria-label="btn-reset" onClick={ HandleReset }> Reset </button>
     </>
   )
 } 
